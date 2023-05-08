@@ -5,12 +5,26 @@ int main() {
 
   double num1;
   double num2;
+  char op;
 
   printf("Enter first number: ");
   scanf("%lf", &num1); // don't forget pointer!
+  printf("Enter operator: ");
+  scanf(" %c", &op);
   printf("Enter second number: ");
-  scanf("%lf", &num2);  //don't forget pointer!
-  printf("The sum is %f.", num1 + num2);
+  scanf("%lf", &num2);
+
+  if (op == '+') {
+    printf("Answer is %f \n", num1 + num2);
+  } else if (op == '-') {
+    printf("Answer is %f \n", num1 - num2);
+  }  else if (op == '*') {
+    printf("Answer is %f \n", num1 * num2);
+  } else if (op == '/') {
+    printf("Answer is %f \n", num1 / num2);
+  } else {
+    printf("Invalid operator.\n");
+  }
 
   return 0;
 
